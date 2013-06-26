@@ -10,6 +10,7 @@ figure,
 footer,
 header,
 hgroup,
+main,
 nav,
 section,
 summary
@@ -69,6 +70,7 @@ a:hover
 
 h1
   font-size: 2em
+  margin: 0.67em 0
 
 // Addresses styling not present in IE 8/9, Safari 5, and Chrome.
 
@@ -85,6 +87,13 @@ strong
 
 dfn
   font-style: italic
+
+// Address differences between Firefox and other browsers.
+
+hr
+  -moz-box-sizing: content-box
+  box-sizing: content-box
+  height: 0
 
 // Addresses styling not present in IE 8/9.
 
@@ -104,9 +113,7 @@ samp
 // Improves readability of pre-formatted text in all browsers.
 
 pre
-  white-space: pre
   white-space: pre-wrap
-  word-wrap: break-word
 
 // Sets consistent quote types.
 
@@ -186,6 +193,15 @@ button,
 input
   line-height: normal
 
+// Address inconsistent `text-transform` inheritance for `button` and `select`.
+// All other form control elements do not inherit `text-transform` values.
+// Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+// Correct `select` style inheritance in Firefox 4+ and Opera.
+
+button,
+select
+  text-transform: none
+
 // 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls.
 // 2. Corrects inability to style clickable `input` types in iOS.
 // 3. Improves usability and consistency of cursor style between image-type `input` and others.
@@ -201,7 +217,7 @@ input[type="submit"]
 // Re-set default cursor for disabled elements.
 
 button[disabled],
-input[disabled]
+html input[disabled]
   cursor: default
 
 // 1. Addresses box sizing set to `content-box` in IE 8/9.
