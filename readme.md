@@ -4,7 +4,9 @@ Normalize.sass is a port of Normalize.css to [indented Sass syntax](http://sass-
 
 ## What is Normalize?
 
-Normalize is a stylesheet that makes browsers render all elements more consistently and in line with modern standards. We researched the differences between default browser styles in order to precisely target only the styles that need normalizing.
+No other styles should come before Normalize.css.
+
+It is recommended that you include the entire file as untouched library code.
 
 ## What does it do?
 
